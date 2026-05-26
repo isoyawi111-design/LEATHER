@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leather Electrical | Your Electrical Specialist</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    line-height:1.6;
+    color:#333;
+}
+
+header{
+    background:#0b1f3a;
+    color:white;
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+}
+
+header h1{
+    font-size:28px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+}
+
+.hero{
+    background:url('https://images.unsplash.com/photo-1581092919535-7146ff1a5903?auto=format&fit=crop&w=1400&q=80') center/cover;
+    height:90vh;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.hero-content{
+    background:rgba(0,0,0,0.6);
+    padding:40px;
+    border-radius:10px;
+}
+
+.hero h2{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+.btn{
+    background:#ff9800;
+    color:white;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+section{
+    padding:70px 50px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:36px;
+    color:#0b1f3a;
+}
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:10px;
+}
+
+.services{
+    background:#f4f4f4;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.service-card{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.service-card h3{
+    margin-bottom:15px;
+    color:#0b1f3a;
+}
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.project-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.project-card div{
+    padding:20px;
+}
+
+.contact{
+    background:#0b1f3a;
+    color:white;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:5px;
+}
+
+.contact-form button{
+    background:#ff9800;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+footer{
+    background:#06101f;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:768px){
+
+.about,
+.contact-container{
+    grid-template-columns:1fr;
+}
+
+.hero h2{
+    font-size:35px;
+}
+
+header{
+    flex-direction:column;
+}
+
+nav{
+    margin-top:15px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Leather Electrical</h1>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO SECTION -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+    <h2>Your Electrical Specialist</h2>
+
+    <p>
+        Professional Electrical Construction, Installation &
+        Maintenance Services Across Papua New Guinea
+    </p>
+
+    <a href="#contact" class="btn">Contact Us</a>
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="section-title">About Us</h2>
+
+<div class="about">
+
+<div>
+    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80">
+</div>
+
+<div>
+    <h3>Who We Are</h3>
+
+    <p>
+        Leather Electrical is a PNG-owned electrical contracting
+        company established in 2011. We specialize in Low Voltage (LV)
+        and Medium Voltage (MV) electrical installations, industrial
+        maintenance, commissioning, and electrical construction.
+    </p>
+
+    <br>
+
+    <p>
+        Our experienced team has successfully completed projects for
+        hospitals, government agencies, industrial facilities, and
+        commercial businesses throughout Papua New Guinea.
+    </p>
+
+    <br>
+
+    <p>
+        We are committed to delivering safe, reliable, and professional
+        electrical solutions that meet industry standards and client expectations.
+    </p>
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+<h2 class="section-title">Our Services</h2>
+
+<div class="service-grid">
+
+<div class="service-card">
+    <h3>Electrical Installations</h3>
+    <p>
+        LV & MV electrical installations for domestic,
+        commercial, and industrial facilities.
+    </p>
+</div>
+
+<div class="service-card">
+    <h3>Electrical Maintenance</h3>
+    <p>
+        Preventive maintenance, repairs, emergency support,
+        and electrical fault finding.
+    </p>
+</div>
+
+<div class="service-card">
+    <h3>Power Factor Boards</h3>
+    <p>
+        Repair and installation of power factor boards
+        with guaranteed workmanship.
+    </p>
+</div>
+
+<div class="service-card">
+    <h3>Lighting Installation</h3>
+    <p>
+        Professional indoor and outdoor lighting systems
+        installation and upgrades.
+    </p>
+</div>
+
+<div class="service-card">
+    <h3>Industrial Services</h3>
+    <p>
+        Plant commissioning, cable termination,
+        cable jointing, and industrial maintenance.
+    </p>
+</div>
+
+<div class="service-card">
+    <h3>24/7 Electrician Support</h3>
+    <p>
+        Reliable electrician-on-call services available
+        24 hours a day, 7 days a week.
+    </p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2 class="section-title">Projects Completed</h2>
+
+<div class="projects-grid">
+
+<div class="project-card">
+    <img src="https://images.unsplash.com/photo-1581092160607-ee22731d8c7d?auto=format&fit=crop&w=1200&q=80">
+
+    <div>
+        <h3>Angau Redevelopment Project</h3>
+
+        <p>
+            Electrical installation works for hospital redevelopment
+            in Lae, Morobe Province.
+        </p>
+    </div>
+</div>
+
+<div class="project-card">
+    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80">
+
+    <div>
+        <h3>Enga Teachers College</h3>
+
+        <p>
+            Electrical infrastructure installation and maintenance
+            services for educational facilities.
+        </p>
+    </div>
+</div>
+
+<div class="project-card">
+    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=80">
+
+    <div>
+        <h3>Industrial Electrical Projects</h3>
+
+        <p>
+            Industrial electrical maintenance and installation
+            services across PNG industries.
+        </p>
+    </div>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<h2 class="section-title" style="color:white;">Contact Us</h2>
+
+<div class="contact-container">
+
+<div>
+    <h3>Leather Electrical</h3>
+
+    <br>
+
+    <p>
+        PO Box 3874<br>
+        Lae, Morobe Province<br>
+        Papua New Guinea
+    </p>
+
+    <br>
+
+    <p>
+        <strong>Director:</strong> Ben Gurame
+    </p>
+
+    <p>
+        <strong>Phone:</strong> +675 79033097
+    </p>
+
+    <p>
+        <strong>Email:</strong> bengurame@gmail.com
+    </p>
+
+    <br>
+
+    <p>
+        <strong>Project Manager:</strong> Manu Miamel
+    </p>
+
+    <p>
+        <strong>Email:</strong> mnilime.miamel@gmail.com
+    </p>
+
+</div>
+
+<div>
+
+<form class="contact-form">
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<input type="text" placeholder="Phone Number">
+
+<textarea rows="6" placeholder="Your Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+    <p>
+        © 2026 Leather Electrical | Your Electrical Specialist
+    </p>
+</footer>
+
+</body>
+</html>
