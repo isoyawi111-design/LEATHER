@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Projects | Leather Electrical PNG</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,7 +11,10 @@
 
 <style>
 
-/* ===== BASE ===== */
+/* =========================================
+   GLOBAL
+========================================= */
+
 *{
     margin:0;
     padding:0;
@@ -24,22 +28,32 @@ body{
     overflow-x:hidden;
 }
 
-/* ===== NAVBAR ===== */
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
 nav{
     position:fixed;
     top:0;
     left:0;
     width:100%;
     z-index:1000;
-    background:rgba(0,0,0,0.85);
+    background:rgba(0,0,0,0.88);
     backdrop-filter:blur(10px);
     border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
 .nav-container{
     width:90%;
+    max-width:1300px;
     margin:auto;
-    padding:20px 0;
+    padding:18px 0;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -52,8 +66,8 @@ nav{
 }
 
 .logo-box{
-    width:45px;
-    height:45px;
+    width:48px;
+    height:48px;
     background:#facc15;
     border-radius:12px;
     display:flex;
@@ -66,7 +80,7 @@ nav{
 
 .nav-links{
     display:flex;
-    gap:35px;
+    gap:30px;
 }
 
 .nav-links a{
@@ -80,42 +94,48 @@ nav{
     color:#facc15;
 }
 
-/* ===== HERO ===== */
-.projects-hero{
-    height:70vh;
-    background:
-    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-    url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop');
-    background-size:cover;
+.quote-btn{
+    background:#facc15;
+    color:#000;
+    padding:14px 28px;
+    border:none;
+    border-radius:10px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero{
+    min-height:70vh;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
-    padding:0 20px;
+    background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
 }
 
-.projects-hero-content h2{
-    font-size:70px;
-    font-weight:800;
+.hero h1{
+    font-size:64px;
 }
 
-.projects-hero-content span{
+.hero span{
     color:#facc15;
 }
 
-.projects-hero-content p{
-    max-width:850px;
-    margin:auto;
+.hero p{
+    margin-top:15px;
+    max-width:800px;
     color:#ccc;
-    font-size:18px;
-    line-height:1.8;
 }
 
-/* ===== SECTION ===== */
-.container{
-    width:90%;
-    margin:auto;
-}
+/* =========================================
+   SECTION
+========================================= */
 
 section{
     padding:100px 0;
@@ -126,69 +146,52 @@ section{
     margin-bottom:60px;
 }
 
-.section-title span{
-    color:#facc15;
-    font-size:14px;
-    letter-spacing:3px;
-}
-
 .section-title h2{
     font-size:45px;
-    margin-top:10px;
 }
 
-/* ===== PROJECT GRID ===== */
-.projects-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-}
-
-.project-card{
-    background:#111;
-    border:1px solid #222;
-    border-radius:20px;
-    padding:25px;
-    transition:0.3s;
-}
-
-.project-card:hover{
-    transform:translateY(-8px);
-    border-color:#facc15;
-}
-
-.project-card h3{
-    font-size:20px;
-    margin-bottom:10px;
+.section-title span{
     color:#facc15;
 }
 
-.project-card p{
-    color:#aaa;
-    font-size:14px;
-    line-height:1.6;
-}
+/* =========================================
+   EXPERIENCE GRID
+========================================= */
 
-/* ===== EXPERIENCE LIST ===== */
-.experience-grid{
+.grid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
     gap:25px;
 }
 
-.exp-card{
+.card{
     background:#111;
     border:1px solid #222;
     padding:25px;
     border-radius:15px;
+    transition:0.3s;
 }
 
-.exp-card h4{
+.card:hover{
+    border-color:#facc15;
+    transform:translateY(-5px);
+}
+
+.card h3{
     color:#facc15;
-    margin-bottom:8px;
+    margin-bottom:10px;
 }
 
-/* ===== CTA ===== */
+.card p{
+    color:#aaa;
+    font-size:14px;
+    line-height:1.6;
+}
+
+/* =========================================
+   CTA
+========================================= */
+
 .cta{
     background:#facc15;
     text-align:center;
@@ -210,9 +213,11 @@ section{
     cursor:pointer;
 }
 
-/* ===== FOOTER ===== */
+/* =========================================
+   FOOTER
+========================================= */
+
 footer{
-    background:#000;
     text-align:center;
     padding:50px 0;
     border-top:1px solid #111;
@@ -222,14 +227,22 @@ footer p{
     color:#888;
 }
 
-/* ===== RESPONSIVE ===== */
-@media(max-width:992px){
-    .projects-grid,
-    .experience-grid{
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:768px){
+    .grid{
         grid-template-columns:1fr;
     }
-    .projects-hero-content h2{
-        font-size:40px;
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .nav-container{
+        flex-direction:column;
+        gap:10px;
     }
 }
 
@@ -238,7 +251,6 @@ footer p{
 
 <body>
 
-<!-- NAVBAR -->
 <!-- NAVBAR -->
 <nav>
     <div class="nav-container">
@@ -256,7 +268,6 @@ footer p{
             <a href="contact.html">Contact</a>
         </div>
 
-        <!-- ✅ GET QUOTE BUTTON ADDED -->
         <button class="quote-btn" onclick="getQuote()">
             Get Quote
         </button>
@@ -265,82 +276,82 @@ footer p{
 </nav>
 
 <!-- HERO -->
-<section class="projects-hero">
-    <div class="projects-hero-content">
-        <h2>Our <span>Projects</span></h2>
-        <p>Major electrical, telecom, and infrastructure projects completed across Papua New Guinea.</p>
+<section class="hero">
+    <div>
+        <h1>Our <span>Project Experience</span></h1>
+        <p>Major electrical, telecom, mining, government and infrastructure projects delivered across Papua New Guinea.</p>
     </div>
 </section>
 
-<!-- EXPERIENCE SECTION (YOUR DATA ADDED HERE) -->
+<!-- EXPERIENCE -->
 <section>
     <div class="container">
 
         <div class="section-title">
-            <span>Client History</span>
-            <h2>Project Experience</h2>
+            <span>Experience</span>
+            <h2>Major Projects Delivered</h2>
         </div>
 
-        <div class="experience-grid">
+        <div class="grid">
 
-            <div class="exp-card">
-                <h4>Oil Search (PNG) Limited</h4>
-                <p>Electrical and infrastructure support — 12/07/2011</p>
+            <div class="card">
+                <h3>Oil Search (PNG) Limited</h3>
+                <p>Electrical infrastructure works - 12/07/2011</p>
             </div>
 
-            <div class="exp-card">
-                <h4>Pogera Joint Venture</h4>
-                <p>Mining electrical support — 15/04/2012</p>
+            <div class="card">
+                <h3>Pogera Joint Venture</h3>
+                <p>Mining electrical support services - 15/04/2012</p>
             </div>
 
-            <div class="exp-card">
-                <h4>District Treasury Office - Jimi</h4>
-                <p>Government electrical installation — 12/07/2015</p>
+            <div class="card">
+                <h3>District Treasury Office - Jimi</h3>
+                <p>Government electrical installation - 12/07/2015</p>
             </div>
 
-            <div class="exp-card">
-                <h4>EFM</h4>
-                <p>Electrical maintenance works — 12/01/2015</p>
+            <div class="card">
+                <h3>EFM</h3>
+                <p>Electrical maintenance works - 12/01/2015</p>
             </div>
 
-            <div class="exp-card">
-                <h4>HBS Angau Redevelopment Project</h4>
-                <p>Electrical infrastructure support — 10/02/2019</p>
+            <div class="card">
+                <h3>HBS Angau Redevelopment</h3>
+                <p>Hospital electrical infrastructure - 2019</p>
             </div>
 
-            <div class="exp-card">
-                <h4>The National Newspaper (Lae)</h4>
-                <p>Current electrical maintenance services</p>
+            <div class="card">
+                <h3>The National Newspaper (Lae)</h3>
+                <p>Ongoing electrical maintenance services</p>
             </div>
 
-            <div class="exp-card">
-                <h4>Jiwaka Provincial Government</h4>
+            <div class="card">
+                <h3>Jiwaka Provincial Government</h3>
                 <p>Project pending formalization</p>
             </div>
 
-            <div class="exp-card">
-                <h4>Enga Teachers College (HBS)</h4>
-                <p>Current infrastructure electrical works</p>
+            <div class="card">
+                <h3>Enga Teachers College (HBS)</h3>
+                <p>Current infrastructure works</p>
             </div>
 
-            <div class="exp-card">
-                <h4>Morobe Provincial Government</h4>
-                <p>Pending formalization</p>
+            <div class="card">
+                <h3>Morobe Provincial Government</h3>
+                <p>Pending approval works</p>
             </div>
 
-            <div class="exp-card">
-                <h4>CPB Contractors - Angau Project</h4>
-                <p>Ongoing electrical works</p>
+            <div class="card">
+                <h3>CPB Contractors - Angau Project</h3>
+                <p>Electrical subcontracting works</p>
             </div>
 
-            <div class="exp-card">
-                <h4>Pacific Palm Property</h4>
-                <p>General maintenance</p>
+            <div class="card">
+                <h3>Pacific Palm Property</h3>
+                <p>General maintenance (under negotiation)</p>
             </div>
 
-            <div class="exp-card">
-                <h4>University of Goroka (UOG)</h4>
-                <p>Maintenance & equipment testing</p>
+            <div class="card">
+                <h3>University of Goroka</h3>
+                <p>Equipment testing & maintenance (pending finalization)</p>
             </div>
 
         </div>
@@ -350,7 +361,7 @@ footer p{
 <!-- CTA -->
 <section class="cta">
     <h2>Need Electrical Solutions?</h2>
-    <button onclick="contact()">Contact Us</button>
+    <button onclick="getQuote()">Get Quote</button>
 </section>
 
 <!-- FOOTER -->
@@ -359,22 +370,9 @@ footer p{
 </footer>
 
 <script>
-function contact(){
-    window.location.href = "contact.html";
-}
-
-<script>
-function contact(){
-    window.location.href = "contact.html";
-}
-
-/* NEW: Get Quote button */
 function getQuote(){
     window.location.href = "contact.html";
 }
-
-console.log("Projects Page Loaded Successfully");
-</script>
 </script>
 
 </body>
