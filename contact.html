@@ -1,1 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Leather Electrical PNG</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#000;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* NAVBAR (same style) */
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(0,0,0,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.nav-container{
+    width:90%;
+    margin:auto;
+    padding:20px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-box{
+    width:45px;
+    height:45px;
+    background:#facc15;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#000;
+    font-size:24px;
+    font-weight:700;
+}
+
+.logo h1{
+    font-size:22px;
+    font-weight:700;
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    color:#fff;
+    text-decoration:none;
+    transition:0.3s;
+    font-weight:500;
+}
+
+.nav-links a:hover{
+    color:#facc15;
+}
+
+.quote-btn{
+    background:#facc15;
+    color:#000;
+    padding:14px 28px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:700;
+}
+
+/* HERO BANNER */
+.hero{
+    min-height:40vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+    position:relative;
+    margin-top:80px;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.75);
+}
+
+.hero h2{
+    position:relative;
+    font-size:48px;
+    z-index:2;
+}
+
+/* CONTACT SECTION */
+.contact{
+    padding:100px 0;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+}
+
+.contact-box{
+    background:#111;
+    padding:40px;
+    border-radius:20px;
+    border:1px solid #222;
+}
+
+.contact-box h3{
+    margin-bottom:20px;
+    font-size:26px;
+}
+
+.contact-box p{
+    color:#9ca3af;
+    margin-bottom:10px;
+    line-height:1.7;
+}
+
+.form-group{
+    margin-bottom:20px;
+}
+
+input, textarea{
+    width:100%;
+    padding:15px;
+    border-radius:10px;
+    border:1px solid #333;
+    background:#000;
+    color:#fff;
+    font-family:inherit;
+}
+
+textarea{
+    height:150px;
+    resize:none;
+}
+
+button{
+    background:#facc15;
+    color:#000;
+    padding:15px 25px;
+    border:none;
+    border-radius:10px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+    background:#000;
+    padding:60px 0;
+    border-top:1px solid #111;
+    text-align:center;
+}
+
+footer p{
+    color:#9ca3af;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h2{
+        font-size:32px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="nav-container">
+        <div class="logo">
+            <div class="logo-box">⚡</div>
+            <h1>Leather Electrical</h1>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <button class="quote-btn">Get Quote</button>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <h2>Contact Us</h2>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+    <div class="container">
+
+        <div class="contact-grid">
+
+            <!-- INFO -->
+            <div class="contact-box">
+                <h3>Get In Touch</h3>
+
+                <p><strong>Company:</strong> Leather Electrical</p>
+                <p><strong>Email:</strong> leatherelectrical.lec@gmail.com</p>
+                <p><strong>Phone:</strong> +675 7903 3097</p>
+                <p><strong>Emergency:</strong> 24/7 Support Available</p>
+                <p><strong>Location:</strong> Papua New Guinea</p>
+
+                <br>
+
+                <p>
+                    We provide electrical and telecommunications services
+                    across PNG including industrial power systems, tower installations,
+                    and maintenance support.
+                </p>
+            </div>
+
+            <!-- FORM -->
+            <div class="contact-box">
+                <h3>Send Message</h3>
+
+                <form id="contactForm">
+
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject">
+                    </div>
+
+                    <div class="form-group">
+                        <textarea placeholder="Your Message"></textarea>
+                    </div>
+
+                    <button type="submit">Send Message</button>
+
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <h3>Leather Electrical</h3>
+    <p>PNG Electrical & Telecommunications Contractor</p>
+    <p>© 2026 All Rights Reserved</p>
+</footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    alert("Message sent successfully! We will contact you soon.");
+    this.reset();
+});
+</script>
+
+</body>
+</html>
