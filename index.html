@@ -3,14 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Leather Electrical PNG</title>
 
-<title>Leather Electrical PNG</title>
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
-/* GLOBAL */
+/* =========================================
+   GLOBAL
+========================================= */
+
 *{
     margin:0;
     padding:0;
@@ -24,13 +27,10 @@ body{
     overflow-x:hidden;
 }
 
-.container{
-    width:90%;
-    max-width:1300px;
-    margin:auto;
-}
+/* =========================================
+   NAVBAR
+========================================= */
 
-/* NAVBAR */
 nav{
     position:fixed;
     top:0;
@@ -44,15 +44,14 @@ nav{
 
 .nav-container{
     width:90%;
-    max-width:1300px;
     margin:auto;
     padding:18px 0;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    position:relative;
 }
 
-/* LOGO */
 .logo{
     display:flex;
     align-items:center;
@@ -60,21 +59,28 @@ nav{
 }
 
 .logo-box{
-    width:48px;
-    height:48px;
+    width:45px;
+    height:45px;
     background:#facc15;
     border-radius:12px;
     display:flex;
     align-items:center;
     justify-content:center;
     color:#000;
+    font-size:24px;
+    font-weight:700;
+}
+
+.logo h1{
+    font-size:22px;
     font-weight:700;
 }
 
 /* NAV LINKS */
+
 .nav-links{
     display:flex;
-    gap:30px;
+    gap:35px;
     align-items:center;
 }
 
@@ -84,144 +90,126 @@ nav{
     font-weight:500;
 }
 
-.nav-links a:hover{
+.nav-links a:hover,
+.nav-links .active{
     color:#facc15;
 }
 
 /* BUTTON */
+
 .quote-btn{
     background:#facc15;
     color:#000;
-    padding:12px 22px;
+    padding:14px 28px;
     border:none;
     border-radius:10px;
+    cursor:pointer;
     font-weight:700;
-    cursor:pointer;
 }
 
-/* HAMBURGER */
-.hamburger{
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
+
+.menu-toggle{
     display:none;
-    font-size:28px;
+    font-size:30px;
     cursor:pointer;
+    color:#fff;
 }
 
-/* MOBILE MENU */
+/* HERO */
+.about-hero{
+    height:70vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2070&auto=format&fit=crop');
+    background-size:cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:0 20px;
+    margin-top:80px;
+}
+
+.about-hero-content h2{
+    font-size:60px;
+    font-weight:800;
+}
+
+.about-hero-content span{
+    color:#facc15;
+}
+
+.about-hero-content p{
+    max-width:850px;
+    margin:auto;
+    color:#d1d5db;
+    line-height:1.8;
+}
+
+/* ABOUT SECTION */
+.about-section{
+    padding:120px 0;
+    background:#0a0a0a;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+}
+
+/* FOOTER (UNCHANGED EXACTLY AS YOU SENT IT) */
+
+footer{
+    background:#000;
+    padding:60px 0;
+    border-top:1px solid #111;
+    text-align:center;
+}
+
+/* MOBILE ONLY CHANGE */
 @media(max-width:768px){
 
-    .hamburger{
+    .menu-toggle{
         display:block;
-        color:#fff;
     }
 
     .nav-links{
         position:absolute;
-        top:80px;
+        top:70px;
         left:0;
         width:100%;
-        background:#111;
+        background:#0a0a0a;
         flex-direction:column;
         display:none;
-        padding:20px 0;
-        text-align:center;
+        gap:0;
+        border-top:1px solid #222;
     }
 
-    .nav-links.active{
+    .nav-links a{
+        padding:15px;
+        border-bottom:1px solid #222;
+        display:block;
+    }
+
+    .nav-links.show{
         display:flex;
     }
 
     .quote-btn{
-        width:80%;
-        margin:10px auto;
+        display:none;
     }
-}
 
-/* HERO */
-.hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    background:url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
-    position:relative;
-}
+    .about-grid{
+        grid-template-columns:1fr;
+    }
 
-.hero::before{
-    content:'';
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,0.75);
-}
-
-.hero-content{
-    position:relative;
-    z-index:2;
-    width:90%;
-    max-width:800px;
-    margin:auto;
-}
-
-.hero h1{
-    font-size:60px;
-}
-
-.hero span{
-    color:#facc15;
-}
-
-/* SECTIONS */
-section{
-    padding:100px 0;
-}
-
-/* FOOTER */
-footer{
-    background:#111;
-    padding:50px;
-    text-align:center;
-}
-
-/* MODAL */
-.modal{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,0.8);
-    justify-content:center;
-    align-items:center;
-    z-index:2000;
-}
-
-.modal-content{
-    background:#111;
-    padding:30px;
-    width:90%;
-    max-width:500px;
-    border-radius:15px;
-}
-
-.modal-content input,
-.modal-content textarea{
-    width:100%;
-    margin:10px 0;
-    padding:12px;
-    border:none;
-    border-radius:8px;
-}
-
-.close{
-    float:right;
-    cursor:pointer;
-    color:#facc15;
-    font-size:22px;
-}
-
-.submit-btn{
-    background:#facc15;
-    border:none;
-    padding:12px;
-    width:100%;
-    font-weight:700;
-    cursor:pointer;
+    .about-hero-content h2{
+        font-size:38px;
+    }
 }
 
 </style>
@@ -231,81 +219,105 @@ footer{
 
 <!-- NAVBAR -->
 <nav>
+
     <div class="nav-container">
 
         <div class="logo">
             <div class="logo-box">⚡</div>
-            <h2>Leather Electrical</h2>
+            <h1>Leather Electrical</h1>
         </div>
 
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
         <div class="nav-links" id="navLinks">
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
+            <a href="about.html" class="active">About</a>
             <a href="services.html">Services</a>
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
-
-            <button class="quote-btn" onclick="openModal()">Get Quote</button>
         </div>
 
+        <button class="quote-btn">Get Quote</button>
+
     </div>
+
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>Reliable Electrical & <span>Telecom Solutions</span></h1>
-        <p>Engineering services across Papua New Guinea.</p>
+<section class="about-hero">
+    <div class="about-hero-content">
+        <h2>About <span>Leather Electrical</span></h2>
+        <p>Trusted engineering company in Papua New Guinea.</p>
     </div>
 </section>
 
-<!-- GET QUOTE MODAL -->
-<div class="modal" id="quoteModal">
+<!-- ABOUT -->
+<section class="about-section">
+    <div class="container">
+        <div class="about-grid">
 
-    <div class="modal-content">
+            <div>
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3">
+            </div>
 
-        <span class="close" onclick="closeModal()">✖</span>
+            <div>
+                <h2>Engineering Excellence Across PNG</h2>
+                <p>We deliver electrical & telecom services nationwide.</p>
+            </div>
 
-        <h2>Get Quote</h2>
+        </div>
+    </div>
+</section>
 
-        <input type="text" placeholder="Your Name">
-        <input type="text" placeholder="Phone Number">
-        <input type="text" placeholder="Location">
-        <textarea rows="4" placeholder="Describe your project"></textarea>
+<!-- FOOTER (UNCHANGED EXACT COPY) -->
+<footer>
 
-        <button class="submit-btn">Submit Request</button>
+    <div class="footer-container">
+
+        <div class="footer-box">
+            <h3>Jiwaka Province</h3>
+            <p>3097 / 7652 4511</p>
+            <p>P.O Box 144, BANZ</p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Enga Province</h3>
+            <p>7903 3097</p>
+            <p>P.O Box 232, PORGERA</p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Lae District</h3>
+            <p>7903 3097</p>
+            <p>P.O Box 3874, LAE</p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Madang Province</h3>
+            <p>8208 6616</p>
+            <p>P.O Box 6991, MADANG</p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Goroka</h3>
+            <p>6908 664 1610</p>
+            <p>P.O Box 1610, GOROKA</p>
+        </div>
 
     </div>
 
-</div>
+    <div class="footer-bottom">
+        <p>Email: leatherelectrical.lec@gmail.com</p>
+        <p>We are available 24/7</p>
+        <p>Installation, Repair & Maintenance</p>
+    </div>
 
-<!-- FOOTER -->
-<footer>
-    <p>© 2026 Leather Electrical PNG</p>
 </footer>
 
 <script>
 
-/* MENU TOGGLE */
 function toggleMenu(){
-    document.getElementById("navLinks").classList.toggle("active");
-}
-
-/* MODAL */
-function openModal(){
-    document.getElementById("quoteModal").style.display="flex";
-}
-
-function closeModal(){
-    document.getElementById("quoteModal").style.display="none";
-}
-
-window.onclick = function(e){
-    if(e.target.id === "quoteModal"){
-        closeModal();
-    }
+    document.getElementById("navLinks").classList.toggle("show");
 }
 
 </script>
