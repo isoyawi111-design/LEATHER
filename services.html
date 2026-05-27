@@ -392,44 +392,70 @@ footer{
 
 /* RESPONSIVE */
 
-@media(max-width:1100px){
-
-.service-grid,
-.why-grid,
-.process-grid{
-    grid-template-columns:1fr 1fr;
-}
-
-}
-
+/* MOBILE */
 @media(max-width:768px){
 
-.nav-links{
-    display:none;
+    .nav-links{
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:#111;
+        flex-direction:column;
+        display:none;
+        padding:10px 0;
+    }
+
+    .nav-links a{
+        padding:15px;
+        border-bottom:1px solid #222;
+    }
+
+    .nav-links.show{
+        display:flex;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .quote-btn{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
 }
 
-.services-hero{
-    height:auto;
-    padding:180px 20px 100px;
-}
+</style>
+</head>
 
-.services-hero-content h2{
-    font-size:40px;
-}
+<body>
 
-.section-title h2,
-.cta h2{
-    font-size:34px;
-}
+<!-- NAVBAR -->
+<nav>
+    <div class="nav-container">
 
-.service-grid,
-.why-grid,
-.process-grid{
-    grid-template-columns:1fr;
-}
+        <div class="logo">
+            <div class="logo-box">⚡</div>
+            <h3>Leather Electrical</h3>
+        </div>
 
-}
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <button class="quote-btn">Get Quote</button>
+
+    </div>
+</nav>
 </style>
 </head>
 <body>
