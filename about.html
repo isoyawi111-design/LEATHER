@@ -220,46 +220,70 @@ footer{
    MOBILE RESPONSIVE MENU
 ========================================= */
 
+/* MOBILE */
 @media(max-width:768px){
-
-    .menu-toggle{
-        display:block;
-    }
 
     .nav-links{
         position:absolute;
         top:70px;
         left:0;
         width:100%;
-        background:#0a0a0a;
+        background:#111;
         flex-direction:column;
-        gap:0;
         display:none;
-        border-top:1px solid #222;
+        padding:10px 0;
     }
 
     .nav-links a{
         padding:15px;
         border-bottom:1px solid #222;
-        display:block;
     }
 
     .nav-links.show{
         display:flex;
     }
 
+    .menu-toggle{
+        display:block;
+    }
+
     .quote-btn{
         display:none;
     }
 
-    .about-grid{
-        grid-template-columns:1fr;
-    }
-
-    .about-hero-content h2{
+    .hero h1{
         font-size:38px;
     }
 }
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="nav-container">
+
+        <div class="logo">
+            <div class="logo-box">⚡</div>
+            <h3>Leather Electrical</h3>
+        </div>
+
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <button class="quote-btn">Get Quote</button>
+
+    </div>
+</nav>
 
 </style>
 </head>
