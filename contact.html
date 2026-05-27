@@ -258,7 +258,54 @@ footer p{
 
     </div>
 </nav>
+/* MOBILE MENU BUTTON FIX */
+.menu-toggle{
+    display:none;
+    font-size:32px;
+    cursor:pointer;
+    color:#fff;
+    user-select:none;
+    z-index:1100;
+}
 
+/* IMPORTANT: ensure nav-container allows dropdown positioning */
+.nav-container{
+    position:relative;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:#111;
+        flex-direction:column;
+        display:none;
+        padding:10px 0;
+        z-index:1000;
+    }
+
+    .nav-links.show{
+        display:flex;
+    }
+
+    .nav-links a{
+        padding:15px;
+        border-bottom:1px solid #222;
+        display:block;
+    }
+
+    .quote-btn{
+        display:none;
+    }
+}
 </style>
 </head>
 <body>
