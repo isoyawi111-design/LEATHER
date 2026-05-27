@@ -6,7 +6,6 @@
 
 <title>Leather Electrical PNG</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
@@ -22,21 +21,30 @@ body{
     font-family:'Poppins',sans-serif;
     background:#000;
     color:#fff;
+    overflow-x:hidden;
+}
+
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
 }
 
 /* NAVBAR */
 nav{
     position:fixed;
     top:0;
+    left:0;
     width:100%;
     z-index:1000;
-    background:rgba(0,0,0,0.9);
+    background:rgba(0,0,0,0.88);
     backdrop-filter:blur(10px);
     border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
 .nav-container{
     width:90%;
+    max-width:1300px;
     margin:auto;
     padding:18px 0;
     display:flex;
@@ -52,21 +60,22 @@ nav{
 }
 
 .logo-box{
-    width:45px;
-    height:45px;
+    width:48px;
+    height:48px;
     background:#facc15;
-    color:#000;
-    font-weight:700;
+    border-radius:12px;
     display:flex;
     align-items:center;
     justify-content:center;
-    border-radius:10px;
+    color:#000;
+    font-weight:700;
 }
 
 /* NAV LINKS */
 .nav-links{
     display:flex;
     gap:30px;
+    align-items:center;
 }
 
 .nav-links a{
@@ -91,35 +100,40 @@ nav{
 }
 
 /* HAMBURGER */
-.menu-btn{
+.hamburger{
     display:none;
-    font-size:30px;
+    font-size:28px;
     cursor:pointer;
-    color:#fff;
 }
 
 /* MOBILE MENU */
-.mobile-menu{
-    display:none;
-    flex-direction:column;
-    background:#111;
-    position:absolute;
-    top:70px;
-    left:0;
-    width:100%;
-    padding:20px;
-    border-top:1px solid #222;
-}
+@media(max-width:768px){
 
-.mobile-menu a{
-    padding:12px;
-    color:#fff;
-    text-decoration:none;
-    border-bottom:1px solid #222;
-}
+    .hamburger{
+        display:block;
+        color:#fff;
+    }
 
-.mobile-menu a:hover{
-    color:#facc15;
+    .nav-links{
+        position:absolute;
+        top:80px;
+        left:0;
+        width:100%;
+        background:#111;
+        flex-direction:column;
+        display:none;
+        padding:20px 0;
+        text-align:center;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .quote-btn{
+        width:80%;
+        margin:10px auto;
+    }
 }
 
 /* HERO */
@@ -127,7 +141,7 @@ nav{
     min-height:100vh;
     display:flex;
     align-items:center;
-    background:url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2070') center/cover no-repeat;
+    background:url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
     position:relative;
 }
 
@@ -140,21 +154,74 @@ nav{
 
 .hero-content{
     position:relative;
+    z-index:2;
     width:90%;
+    max-width:800px;
     margin:auto;
 }
 
-/* RESPONSIVE */
-@media(max-width:768px){
+.hero h1{
+    font-size:60px;
+}
 
-    .nav-links,
-    .quote-btn{
-        display:none;
-    }
+.hero span{
+    color:#facc15;
+}
 
-    .menu-btn{
-        display:block;
-    }
+/* SECTIONS */
+section{
+    padding:100px 0;
+}
+
+/* FOOTER */
+footer{
+    background:#111;
+    padding:50px;
+    text-align:center;
+}
+
+/* MODAL */
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.8);
+    justify-content:center;
+    align-items:center;
+    z-index:2000;
+}
+
+.modal-content{
+    background:#111;
+    padding:30px;
+    width:90%;
+    max-width:500px;
+    border-radius:15px;
+}
+
+.modal-content input,
+.modal-content textarea{
+    width:100%;
+    margin:10px 0;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+}
+
+.close{
+    float:right;
+    cursor:pointer;
+    color:#facc15;
+    font-size:22px;
+}
+
+.submit-btn{
+    background:#facc15;
+    border:none;
+    padding:12px;
+    width:100%;
+    font-weight:700;
+    cursor:pointer;
 }
 
 </style>
@@ -162,70 +229,82 @@ nav{
 
 <body>
 
-<!-- NAV -->
+<!-- NAVBAR -->
 <nav>
-
     <div class="nav-container">
 
         <div class="logo">
             <div class="logo-box">⚡</div>
-            <h1>Leather Electrical</h1>
+            <h2>Leather Electrical</h2>
         </div>
 
-        <div class="nav-links">
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+        <div class="nav-links" id="navLinks">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="services.html">Services</a>
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
+
+            <button class="quote-btn" onclick="openModal()">Get Quote</button>
         </div>
 
-        <button class="quote-btn" onclick="openQuote()">
-            Get Quote
-        </button>
-
-        <div class="menu-btn" onclick="toggleMenu()">☰</div>
-
     </div>
-
-    <!-- MOBILE MENU -->
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-        <a href="#" onclick="openQuote()">Get Quote</a>
-    </div>
-
 </nav>
 
 <!-- HERO -->
 <section class="hero">
     <div class="hero-content">
-        <h2>Reliable Electrical & Telecom Solutions</h2>
-        <p>Professional engineering services across Papua New Guinea</p>
+        <h1>Reliable Electrical & <span>Telecom Solutions</span></h1>
+        <p>Engineering services across Papua New Guinea.</p>
     </div>
 </section>
 
+<!-- GET QUOTE MODAL -->
+<div class="modal" id="quoteModal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeModal()">✖</span>
+
+        <h2>Get Quote</h2>
+
+        <input type="text" placeholder="Your Name">
+        <input type="text" placeholder="Phone Number">
+        <input type="text" placeholder="Location">
+        <textarea rows="4" placeholder="Describe your project"></textarea>
+
+        <button class="submit-btn">Submit Request</button>
+
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Leather Electrical PNG</p>
+</footer>
+
 <script>
 
-/* TOGGLE MOBILE MENU */
+/* MENU TOGGLE */
 function toggleMenu(){
-    let menu = document.getElementById("mobileMenu");
-    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    document.getElementById("navLinks").classList.toggle("active");
 }
 
-/* GET QUOTE POPUP */
-function openQuote(){
-    let name = prompt("Enter your Name:");
-    let phone = prompt("Enter your Phone Number:");
-    let message = prompt("Project Details:");
+/* MODAL */
+function openModal(){
+    document.getElementById("quoteModal").style.display="flex";
+}
 
-    if(name && phone && message){
-        alert("Quote request sent! We will contact you soon.");
-    } else {
-        alert("Please fill all details.");
+function closeModal(){
+    document.getElementById("quoteModal").style.display="none";
+}
+
+window.onclick = function(e){
+    if(e.target.id === "quoteModal"){
+        closeModal();
     }
 }
 
