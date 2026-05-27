@@ -3,17 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us | Leather Electrical PNG</title>
+<title>Home | Leather Electrical PNG</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
-/* =========================================
-   GLOBAL
-========================================= */
-
+/* GLOBAL */
 *{
     margin:0;
     padding:0;
@@ -24,22 +20,17 @@ body{
     font-family:'Poppins',sans-serif;
     background:#000;
     color:#fff;
-    overflow-x:hidden;
 }
 
-/* =========================================
-   NAVBAR
-========================================= */
-
+/* NAVBAR */
 nav{
     position:fixed;
     top:0;
     left:0;
     width:100%;
     z-index:1000;
-    background:rgba(0,0,0,0.88);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid rgba(255,255,255,0.08);
+    background:rgba(0,0,0,0.9);
+    border-bottom:1px solid #222;
 }
 
 .nav-container{
@@ -55,33 +46,24 @@ nav{
 .logo{
     display:flex;
     align-items:center;
-    gap:12px;
+    gap:10px;
 }
 
 .logo-box{
     width:45px;
     height:45px;
     background:#facc15;
-    border-radius:12px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
     color:#000;
-    font-size:24px;
-    font-weight:700;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:800;
+    border-radius:10px;
 }
-
-.logo h1{
-    font-size:22px;
-    font-weight:700;
-}
-
-/* NAV LINKS */
 
 .nav-links{
     display:flex;
-    gap:35px;
-    align-items:center;
+    gap:30px;
 }
 
 .nav-links a{
@@ -90,124 +72,144 @@ nav{
     font-weight:500;
 }
 
-.nav-links a:hover,
-.nav-links .active{
+.nav-links a:hover{
     color:#facc15;
 }
 
-/* BUTTON */
-
-.quote-btn{
-    background:#facc15;
-    color:#000;
-    padding:14px 28px;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
-    font-weight:700;
-}
-
-/* =========================================
-   MOBILE MENU BUTTON
-========================================= */
-
+/* MOBILE MENU */
 .menu-toggle{
     display:none;
     font-size:30px;
     cursor:pointer;
-    color:#fff;
+}
+
+.quote-btn{
+    background:#facc15;
+    color:#000;
+    padding:12px 22px;
+    border:none;
+    border-radius:8px;
+    font-weight:700;
+    cursor:pointer;
 }
 
 /* HERO */
-.about-hero{
-    height:70vh;
-    background:
-    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-    url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2070&auto=format&fit=crop');
-    background-size:cover;
+.hero{
+    height:100vh;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
     padding:0 20px;
+    background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2070&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
     margin-top:80px;
 }
 
-.about-hero-content h2{
+.hero h1{
     font-size:60px;
-    font-weight:800;
 }
 
-.about-hero-content span{
+.hero h2{
     color:#facc15;
+    margin-top:10px;
+    font-size:26px;
 }
 
-.about-hero-content p{
-    max-width:850px;
-    margin:auto;
-    color:#d1d5db;
+.hero p{
+    max-width:800px;
+    margin:20px auto;
     line-height:1.8;
+    color:#ccc;
 }
 
-/* ABOUT SECTION */
-.about-section{
-    padding:120px 0;
-    background:#0a0a0a;
+.hero-buttons{
+    margin-top:25px;
 }
 
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
+.hero-buttons button{
+    margin:10px;
+    padding:14px 28px;
+    border:none;
+    border-radius:8px;
+    font-weight:700;
+    cursor:pointer;
 }
 
-/* FOOTER (UNCHANGED EXACTLY AS YOU SENT IT) */
+.primary{
+    background:#facc15;
+    color:#000;
+}
 
+.secondary{
+    background:transparent;
+    color:#fff;
+    border:2px solid #fff;
+}
+
+/* FOOTER */
 footer{
     background:#000;
-    padding:60px 0;
-    border-top:1px solid #111;
+    border-top:1px solid #222;
+    padding:50px 10%;
     text-align:center;
+    margin-top:80px;
 }
 
-/* MOBILE ONLY CHANGE */
-@media(max-width:768px){
+.footer-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    text-align:left;
+    margin-bottom:30px;
+}
 
-    .menu-toggle{
-        display:block;
-    }
+.footer-grid h3{
+    color:#facc15;
+    margin-bottom:10px;
+}
+
+.footer-bottom{
+    border-top:1px solid #222;
+    padding-top:20px;
+    color:#aaa;
+}
+
+/* MOBILE */
+@media(max-width:768px){
 
     .nav-links{
         position:absolute;
         top:70px;
         left:0;
         width:100%;
-        background:#0a0a0a;
+        background:#111;
         flex-direction:column;
         display:none;
-        gap:0;
-        border-top:1px solid #222;
+        padding:10px 0;
     }
 
     .nav-links a{
         padding:15px;
         border-bottom:1px solid #222;
-        display:block;
     }
 
     .nav-links.show{
         display:flex;
     }
 
+    .menu-toggle{
+        display:block;
+    }
+
     .quote-btn{
         display:none;
     }
 
-    .about-grid{
-        grid-template-columns:1fr;
-    }
-
-    .about-hero-content h2{
+    .hero h1{
         font-size:38px;
     }
 }
@@ -219,19 +221,18 @@ footer{
 
 <!-- NAVBAR -->
 <nav>
-
     <div class="nav-container">
 
         <div class="logo">
             <div class="logo-box">⚡</div>
-            <h1>Leather Electrical</h1>
+            <h3>Leather Electrical</h3>
         </div>
 
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
         <div class="nav-links" id="navLinks">
             <a href="index.html">Home</a>
-            <a href="about.html" class="active">About</a>
+            <a href="about.html">About</a>
             <a href="services.html">Services</a>
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
@@ -240,86 +241,72 @@ footer{
         <button class="quote-btn">Get Quote</button>
 
     </div>
-
 </nav>
 
 <!-- HERO -->
-<section class="about-hero">
-    <div class="about-hero-content">
-        <h2>About <span>Leather Electrical</span></h2>
-        <p>Trusted engineering company in Papua New Guinea.</p>
-    </div>
-</section>
+<section class="hero">
 
-<!-- ABOUT -->
-<section class="about-section">
-    <div class="container">
-        <div class="about-grid">
+    <div>
 
-            <div>
-                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3">
-            </div>
+        <h1>Leather Electrical</h1>
 
-            <div>
-                <h2>Engineering Excellence Across PNG</h2>
-                <p>We deliver electrical & telecom services nationwide.</p>
-            </div>
+        <h2>Hello from power, precision & performance.</h2>
 
+        <p>
+            We are Leather Electrical — a trusted engineering company delivering
+            electrical systems, telecommunications infrastructure, generator installations,
+            and maintenance services across Papua New Guinea.
+        </p>
+
+        <p>
+            We don’t just install systems — we build power that keeps PNG running.
+            From remote sites to industrial projects, we deliver safe and reliable engineering solutions.
+        </p>
+
+        <div class="hero-buttons">
+            <button class="primary">Get Started</button>
+            <button class="secondary">View Services</button>
         </div>
+
     </div>
+
 </section>
 
-<!-- FOOTER (UNCHANGED EXACT COPY) -->
+<!-- FOOTER -->
 <footer>
 
-    <div class="footer-container">
+    <div class="footer-grid">
 
-        <div class="footer-box">
-            <h3>Jiwaka Province</h3>
-            <p>3097 / 7652 4511</p>
-            <p>P.O Box 144, BANZ</p>
+        <div>
+            <h3>Jiwaka</h3>
+            <p>Banz Office</p>
+            <p>Contact: 7652 4511</p>
         </div>
 
-        <div class="footer-box">
-            <h3>Enga Province</h3>
-            <p>7903 3097</p>
-            <p>P.O Box 232, PORGERA</p>
+        <div>
+            <h3>Lae</h3>
+            <p>Morobe Province</p>
+            <p>Contact: 7903 3097</p>
         </div>
 
-        <div class="footer-box">
-            <h3>Lae District</h3>
-            <p>7903 3097</p>
-            <p>P.O Box 3874, LAE</p>
-        </div>
-
-        <div class="footer-box">
-            <h3>Madang Province</h3>
-            <p>8208 6616</p>
-            <p>P.O Box 6991, MADANG</p>
-        </div>
-
-        <div class="footer-box">
-            <h3>Goroka</h3>
-            <p>6908 664 1610</p>
-            <p>P.O Box 1610, GOROKA</p>
+        <div>
+            <h3>Enga</h3>
+            <p>Porgera Office</p>
+            <p>Contact: 7903 3097</p>
         </div>
 
     </div>
 
     <div class="footer-bottom">
-        <p>Email: leatherelectrical.lec@gmail.com</p>
-        <p>We are available 24/7</p>
-        <p>Installation, Repair & Maintenance</p>
+        © 2026 Leather Electrical PNG | All Rights Reserved
     </div>
 
 </footer>
 
 <script>
-
 function toggleMenu(){
     document.getElementById("navLinks").classList.toggle("show");
 }
-
 </script>
 
 </body>
