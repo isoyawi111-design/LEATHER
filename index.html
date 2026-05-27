@@ -273,6 +273,7 @@ footer{
 </section>
 
 <!-- FOOTER -->
+<!-- FOOTER (UNCHANGED STYLE) -->
 <footer class="footer">
 
   <div class="footer-container">
@@ -321,6 +322,62 @@ footer{
   </div>
 
 </footer>
+
+<style>
+
+.footer{
+    background:#071c36;
+    color:#fff;
+    padding:50px 10%;
+    font-family:Arial, sans-serif;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+    margin-bottom:30px;
+}
+
+.footer-box h3{
+    color:#ffcc00;
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.footer-box p{
+    margin:8px 0;
+    color:#ddd;
+    line-height:1.6;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,0.2);
+    padding-top:20px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:15px;
+    font-weight:bold;
+    color:#ffcc00;
+}
+
+@media(max-width:768px){
+
+    .footer-bottom{
+        flex-direction:column;
+        text-align:center;
+    }
+
+}
+
+</style>
+
+<script>
+function getQuote(){
+    window.location.href = "contact.html";
+}
+</script>
 
 <script>
 function toggleMenu(){
