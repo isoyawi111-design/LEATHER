@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Contact | Leather Electrical PNG</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +24,7 @@ body{
     overflow-x:hidden;
 }
 
-/* NAVBAR (same style) */
+/* NAVBAR (FIXED PROPERLY) */
 nav{
     position:fixed;
     top:0;
@@ -42,6 +43,7 @@ nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
+    position:relative;
 }
 
 .logo{
@@ -94,7 +96,17 @@ nav{
     font-weight:700;
 }
 
-/* HERO BANNER */
+/* MENU BUTTON (FIXED) */
+.menu-toggle{
+    display:none;
+    font-size:32px;
+    cursor:pointer;
+    color:#fff;
+    user-select:none;
+    z-index:2000;
+}
+
+/* HERO */
 .hero{
     min-height:40vh;
     display:flex;
@@ -118,7 +130,7 @@ nav{
     z-index:2;
 }
 
-/* CONTACT SECTION */
+/* CONTACT */
 .contact{
     padding:100px 0;
 }
@@ -141,46 +153,6 @@ nav{
     border:1px solid #222;
 }
 
-.contact-box h3{
-    margin-bottom:20px;
-    font-size:26px;
-}
-
-.contact-box p{
-    color:#9ca3af;
-    margin-bottom:10px;
-    line-height:1.7;
-}
-
-.form-group{
-    margin-bottom:20px;
-}
-
-input, textarea{
-    width:100%;
-    padding:15px;
-    border-radius:10px;
-    border:1px solid #333;
-    background:#000;
-    color:#fff;
-    font-family:inherit;
-}
-
-textarea{
-    height:150px;
-    resize:none;
-}
-
-button{
-    background:#facc15;
-    color:#000;
-    padding:15px 25px;
-    border:none;
-    border-radius:10px;
-    font-weight:700;
-    cursor:pointer;
-}
-
 /* FOOTER */
 footer{
     background:#000;
@@ -189,44 +161,39 @@ footer{
     text-align:center;
 }
 
-footer p{
-    color:#9ca3af;
-}
-
-/* RESPONSIVE */
-/* MOBILE */
+/* =========================
+   MOBILE FIX (IMPORTANT)
+========================= */
 @media(max-width:768px){
+
+    .menu-toggle{
+        display:block;
+    }
 
     .nav-links{
         position:absolute;
-        top:70px;
+        top:100%;
         left:0;
         width:100%;
         background:#111;
         flex-direction:column;
         display:none;
-        padding:10px 0;
-    }
-
-    .nav-links a{
-        padding:15px;
-        border-bottom:1px solid #222;
+        border-top:1px solid #222;
+        z-index:999;
     }
 
     .nav-links.show{
         display:flex;
     }
 
-    .menu-toggle{
+    .nav-links a{
+        padding:15px;
+        border-bottom:1px solid #222;
         display:block;
     }
 
     .quote-btn{
         display:none;
-    }
-
-    .hero h1{
-        font-size:38px;
     }
 }
 
@@ -241,7 +208,7 @@ footer p{
 
         <div class="logo">
             <div class="logo-box">⚡</div>
-            <h3>Leather Electrical</h3>
+            <h1>Leather Electrical</h1>
         </div>
 
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
@@ -258,77 +225,6 @@ footer p{
 
     </div>
 </nav>
-/* MOBILE MENU BUTTON FIX */
-.menu-toggle{
-    display:none;
-    font-size:32px;
-    cursor:pointer;
-    color:#fff;
-    user-select:none;
-    z-index:1100;
-}
-
-/* IMPORTANT: ensure nav-container allows dropdown positioning */
-.nav-container{
-    position:relative;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-    .menu-toggle{
-        display:block;
-    }
-
-    .nav-links{
-        position:absolute;
-        top:70px;
-        left:0;
-        width:100%;
-        background:#111;
-        flex-direction:column;
-        display:none;
-        padding:10px 0;
-        z-index:1000;
-    }
-
-    .nav-links.show{
-        display:flex;
-    }
-
-    .nav-links a{
-        padding:15px;
-        border-bottom:1px solid #222;
-        display:block;
-    }
-
-    .quote-btn{
-        display:none;
-    }
-}
-</style>
-</head>
-<body>
-
-<!-- NAVBAR -->
-<nav>
-    <div class="nav-container">
-        <div class="logo">
-            <div class="logo-box">⚡</div>
-            <h1>Leather Electrical</h1>
-        </div>
-
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </div>
-
-        <button class="quote-btn">Get Quote</button>
-    </div>
-</nav>
 
 <!-- HERO -->
 <section class="hero">
@@ -341,46 +237,19 @@ footer p{
 
         <div class="contact-grid">
 
-            <!-- INFO -->
             <div class="contact-box">
                 <h3>Get In Touch</h3>
-
-                <p><strong>Company:</strong> Leather Electrical</p>
                 <p><strong>Email:</strong> leatherelectrical.lec@gmail.com</p>
                 <p><strong>Phone:</strong> +675 7903 3097</p>
-                <p><strong>Emergency:</strong> 24/7 Support Available</p>
-                <p><strong>Location:</strong> Papua New Guinea</p>
-
-                <br>
-
-                <p>
-                    We provide electrical and telecommunications services
-                    across PNG including industrial power systems, tower installations,
-                    and maintenance support.
-                </p>
             </div>
 
-            <!-- FORM -->
             <div class="contact-box">
                 <h3>Send Message</h3>
-
                 <form id="contactForm">
 
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="text" placeholder="Subject">
-                    </div>
-
-                    <div class="form-group">
-                        <textarea placeholder="Your Message"></textarea>
-                    </div>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Message"></textarea>
 
                     <button type="submit">Send Message</button>
 
